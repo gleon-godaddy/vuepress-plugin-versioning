@@ -31,6 +31,7 @@ module.exports = (options, context) => {
 
       const currentVersion = versions[0]
       context.themeConfig.versionedSidebar = {}
+      console.log('\n\n\n', versions, '\n\n\n');
       for (const version of versions) {
         const versionSidebarConfigPath = path.join(versionedSourceDir, version, 'sidebar.config.json')
         if (!fs.existsSync(versionSidebarConfigPath)) {
